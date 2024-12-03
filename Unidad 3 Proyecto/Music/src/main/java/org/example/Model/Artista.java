@@ -1,49 +1,41 @@
- package org.example.Model;
+package org.example.Model;
 
 public class Artista {
+    // Atributos
     private String nombre;
-    private String generoMusical = "Desconocido";  // Valor predeterminado
-    private String pais = "Desconocido";  // Valor predeterminado
+    private String genero;
+    private String pais;
 
-    // Constructor modificado para aceptar solo el nombre
-    public Artista(String nombre) {
+    // Constructor
+    public Artista(String nombre, String genero, String pais) {
         this.nombre = nombre;
+        this.genero = genero;
+        this.pais = pais;
     }
 
-    public Artista() {
-
-    }
-
-    // Método que devuelve la información del artista
-    public String obtenerInformacion() {
-        return "Artista: " + nombre + ", Género: " + generoMusical + ", País: " + pais;
-    }
-
-    // Métodos getters y setters
+    // Getters
     public String getNombre() {
         return nombre;
     }
 
-    public String getGeneroMusical() {
-        return generoMusical;
+    public String getGenero() {
+        return genero;
     }
 
     public String getPais() {
         return pais;
     }
 
-    public String toCSV() {
-        return nombre + "," + generoMusical + "," + pais;
-    }
-
+    // Setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setGeneroMusical(String generoMusical) {
-        this.generoMusical = generoMusical;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    public void setPais(String s) {
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 }

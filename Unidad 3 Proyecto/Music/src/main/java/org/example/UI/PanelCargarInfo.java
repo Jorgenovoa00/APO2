@@ -36,7 +36,7 @@ public class PanelCargarInfo extends JPanel implements ActionListener {
         this.add(new JScrollPane(txtAreaCanciones), BorderLayout.CENTER);  // Área de texto dentro de un JScrollPane
     }
 
-    // Metodo para cargar canciones desde un archivo CSV
+    // Método para cargar canciones desde un archivo CSV
     private void cargarCancionesDesdeCSV(String rutaArchivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
             String linea;
@@ -59,8 +59,6 @@ public class PanelCargarInfo extends JPanel implements ActionListener {
             e.printStackTrace();
         }
     }
-
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
